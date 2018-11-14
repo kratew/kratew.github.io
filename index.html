@@ -165,40 +165,6 @@
 					     <!-- Add Pagination -->
 					     <div class="swiper-pagination"></div>
 					   </div>
-
-						<!-- Swiper JS -->
-						<script src="./js/swiper.min.js"></script>
-						<!-- Initialize Swiper -->
-						<script>
-							$(document).ready(function() {
-								$(window).resize(function() {
-						          FixWindowSize();
-						      });
-						      FixWindowSize();
-								 });
-
-							function FixWindowSize(){
-								if (matchMedia("screen and (max-width: 768px)").matches) {
-									var swiper = new Swiper('.swiper-container', {
-									  slidesPerView: 2,
-									  spaceBetween: 10,
-									  pagination: {
-										 el: '.swiper-pagination',
-										 clickable: true,
-									  },
-									});
-								} else {
-									var swiper = new Swiper('.swiper-container', {
-						  					  slidesPerView: 3,
-						  					  spaceBetween: 10,
-						  					  pagination: {
-						  						 el: '.swiper-pagination',
-						  						 clickable: true,
-						  					  },
-						  					});
-								}
-							}
-						</script>
 					</div>
 				</div>
 			</section>
@@ -413,7 +379,39 @@
 
 
 		<script src="js/jquery-2.1.1.min.js"></script>
-		<script src="js/swiper.min.js"></script>
+        <!-- Swiper JS -->
+        <script src="./js/swiper.min.js"></script>
+        <!-- Initialize Swiper -->
+        <script>
+            $(document).ready(function() {
+                $(window).resize(function() {
+                    FixWindowSize();
+                });
+                FixWindowSize();
+            });
+
+            function FixWindowSize(){
+                if (matchMedia("screen and (max-width: 768px)").matches) {
+                    var swiper = new Swiper('.swiper-container', {
+                        slidesPerView: 2,
+                        spaceBetween: 10,
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true,
+                        },
+                    });
+                } else {
+                    var swiper = new Swiper('.swiper-container', {
+                        slidesPerView: 3,
+                        spaceBetween: 10,
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true,
+                        },
+                    });
+                }
+            }
+        </script>
 		<script>
 			$(document).ready(function() {
 				// 마우스 휠 이벤트
