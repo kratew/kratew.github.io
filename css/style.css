@@ -271,7 +271,6 @@ border-radius: 10px; -webkit-border-radius: 10px; -moz-border-radius: 10px; -ms-
 
 
 @media screen and (max-width: 1600px) {
-    .section1 {background-position: left -130px center !important;}
     .keyword div ul li { width:90px; height:90px; }
     .section6 div p { font-size: 18px; line-height: 2;}
 }
@@ -301,6 +300,7 @@ section { padding-top: 80px; }
 .m_menu div h3 { font-size: 0.8rem; color: #aaa; }
 .m_menu div p { font-size: 1rem; margin-bottom: 8px; }
 
+.section1 {background-position: left -130px center !important;}
 
 section > div .leftBox { width: 100%; height: auto; margin: 0; }
 section > div .rightBox { width: 100%; margin-top: 40px;}
@@ -434,3 +434,11 @@ section .rightBox > div { transform: translateX(-50%);}
     .section4 .rightBox > div { transform: translateX(-69%); }
     .section4 .bx-pager { bottom:-40px; }
   }
+
+
+@media only screen and (max-width:470px) {
+
+.mTitle {transform: translate(-48%, -95%);}
+.mTitle span { padding: 20px 65px; background-position: center right 53px; font-size:18px;}
+
+}
