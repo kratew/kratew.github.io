@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Casting Vote Solution</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/swiper.css">
 	</head>
 	<body>
 		<nav>
@@ -155,20 +156,49 @@
 						<h2 class="white">Used Cases</h2>
 					</div>
 					<div class="rightBox">
-						<ul class="caseSlide">
-							<li>
-								<img src="./img/case1.jpg" alt="">
-								<p>솔루션_01 국민남친 선발대회 시즌1 ▶</p>
-							</li>
-							<li>
-								<img src="./img/case2.jpg" alt="">
-								<p>솔루션_02 멍냥이를 부탁해 ▶</p>
-							</li>
-							<li>
-								<img src="./img/case3.jpg" alt="">
-								<p>솔루션_03 국민남친 선발대회 시즌2 ▶</p>
-							</li>
-						</ul>
+						<div class="swiper-container">
+					     <div class="swiper-wrapper">
+					       <div class="swiper-slide"><img src="./img/case1.jpg" alt=""></div>
+					       <div class="swiper-slide"><img src="./img/case2.jpg" alt=""></div>
+					       <div class="swiper-slide"><img src="./img/case3.jpg" alt=""></div>
+					     </div>
+					     <!-- Add Pagination -->
+					     <div class="swiper-pagination"></div>
+					   </div>
+
+						<!-- Swiper JS -->
+						<script src="./js/swiper.min.js"></script>
+						<!-- Initialize Swiper -->
+						<script>
+							$(document).ready(function() {
+								$(window).resize(function() {
+						          FixWindowSize();
+						      });
+						      FixWindowSize();
+								 });
+
+							function FixWindowSize(){
+								if (matchMedia("screen and (max-width: 768px)").matches) {
+									var swiper = new Swiper('.swiper-container', {
+									  slidesPerView: 2,
+									  spaceBetween: 10,
+									  pagination: {
+										 el: '.swiper-pagination',
+										 clickable: true,
+									  },
+									});
+								} else {
+									var swiper = new Swiper('.swiper-container', {
+						  					  slidesPerView: 3,
+						  					  spaceBetween: 10,
+						  					  pagination: {
+						  						 el: '.swiper-pagination',
+						  						 clickable: true,
+						  					  },
+						  					});
+								}
+							}
+						</script>
 					</div>
 				</div>
 			</section>
@@ -383,8 +413,7 @@
 
 
 		<script src="js/jquery-2.1.1.min.js"></script>
-		<script src="js/jquery-ui.js"></script>
-		<script src="js/jquery.bxslider.min.js"></script>
+		<script src="js/swiper.min.js"></script>
 		<script>
 			$(document).ready(function() {
 				// 마우스 휠 이벤트
@@ -527,7 +556,7 @@
 			 		} else if(wTop >= scArr[3] && wTop < scArr[4]) {
 			 			$dots_li_a.removeClass('active');
 			 			$dots_li.eq(3).find('a').addClass('active');
-			 			$('.section4 .bx-wrapper').animate({'opacity':'1','margin-top':'80px'}, 500);
+			 			$('.section4 .swiper-container').animate({'opacity':'1','margin-top':'80px'}, 500);
 			 		} else if(wTop >= scArr[4] && wTop < scArr[5]) {
 			 			$dots_li_a.removeClass('active');
 			 			$dots_li.eq(4).find('a').addClass('active');
@@ -610,33 +639,10 @@
 					$('html, body').off('scroll touchmove mousewheel');
 				});
 
-				// $(function() {
-				// 	new fullScroll({
-				// 		displayDots: true,
-				// 		dotsPosition: 'left',
-				// 		animateTime: 0.7,
-				// 		animateFunction: 'ease'
-				// 	});
-				// });
-
-				$(function() {
-					$('.caseSlide').bxSlider({
-						minSlides: 2,
-						maxSlides: 3,
-						slideWidth: 270,
-						slideMargin: 20,
-						infiniteLoop: false
-					});
-				});
-
-				$(function() {
-					$('.bx-controls-direction > a').empty();
-				});
-
 				// 로딩 화면 오픈
 				function cfn_openLoading() {
 					$('.black_bg').show();
-					
+
 					// 스크롤 막기
 					$('html, body').on('scroll touchmove mousewheel', function(e) {
 						e.preventDefault();
@@ -644,7 +650,7 @@
 						return false;
 					});
 				}
-				
+
 				// 로딩 화면 닫기
 				function cfn_closeLoading() {
 					$('.black_bg').hide();
@@ -674,7 +680,7 @@
 				// 이메일 전송 후 처리
 				function afterSendEmail() {
 					$("#txtName, #txtEmail, #txtAreaMsg").val("");
-					
+
 					alert("메시지 전송이 완료 되었습니다.");
 
 					return;
