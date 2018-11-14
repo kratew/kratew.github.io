@@ -44,7 +44,7 @@
   transition-property: transform, -webkit-transform;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
-  padding-bttom: 60px;
+  padding-bottom: 60px;
 }
 .swiper-container-android .swiper-slide,
 .swiper-wrapper {

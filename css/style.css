@@ -315,7 +315,7 @@ section { padding-top: 80px; }
 section > div .leftBox { width: 100%; height: auto; margin: 0; }
 section > div .rightBox { width: 100%; margin-top: 40px;}
 section .rightBox > div {width: 100%; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); }
-.section4 .rightBox > div {transform: translateX(-58%);}
+.section4 .rightBox > div {transform: translateX(-50%);}
 .section8 .rightBox > div {transform: translateX(-46%);}
 .bx-wrapper {width: 100%; }
 .introduce { margin-bottom: 40px; }
@@ -438,7 +438,6 @@ section .rightBox > div { transform: translateX(-50%);}
     .keytwo>* { float:left; }
 
     /* used cases */
-    .section4 .rightBox > div { transform: translateX(-69%); }
     .section4 .bx-pager { bottom:-40px; }
   }
 
