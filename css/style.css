@@ -220,7 +220,7 @@ section .rightBox > div { width: 90%; }
 .contact .nameEmail div:first-child,
 .contact .nameEmail div:last-child { width: 100%;}
 .contact form input {border: none;width: 100%;height: 40px;padding: 10px 15px;box-sizing: border-box;border-radius: 5px;background:#fff;}
-.contact form textarea { width: 100%; height: 250px; padding: 10px 15px; box-sizing: border-box; border-radius: 5px; font-size: 14px; }
+.contact form textarea { width: 100%; height: 250px; padding: 10px 15px; box-sizing: border-box; border-radius: 5px; font-size: 14px; border:none;}
 
 .contact .info ul { margin-bottom: 85px; }
 .contact .info ul li { float: left; margin-right: 20px;  }

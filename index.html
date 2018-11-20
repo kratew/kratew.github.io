@@ -271,7 +271,7 @@
 							<ul>
 								<li><span>Nayoung Kim</span><span>Public Relations Planning Team</span></li>
 								<li><span>Aaron</span><span>Technical Development Team</span></li>
-								<li><span>Nams</span><span>Designer&Publisher</span></li>
+								<li><span>Dowon</span><span>Designer&Publisher</span></li>
 								<li><span>JJIN</span><span>Frontend Developer</span></li>
 								<li><span>Esther</span><span>Frontend Developer</span></li>
 							</ul>
@@ -700,32 +700,32 @@
 
 					return true;
 				}
-				
-				
-				
+
+
+
 				// 이메일 입력 및 양식 확인
 				function isValidEmailAddr() {
 					var check = true;
 					var regEmail = /([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
 
 					var $txtEmail_id	= $("#txtEmail");
-					
+
 					if(!$txtEmail_id.val()) {
 						alert("Email을 입력해주세요.");
 			       		$txtEmail_id.focus();
-			       		
+
 			       		check = false;
 			       	} else {
 			       		if(!regEmail.test($txtEmail_id.val())) {
 							alert("Email 양식을 다시 확인해주세요.");
 							$txtEmail_id.focus();
-							
+
 				       		check = false;
 			       		} else {
 			       			check = true;
 			       		}
 		            }
-					
+
 					return check;
 				}
 
