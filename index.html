@@ -79,12 +79,9 @@
 							<li>
 								<p class="introduce">
 									캐스팅보트솔루션은 현재 유통되고 있는 암호화폐를 활용하여 투표하는 블록체인 기반의 시스템을 제공합니다. 본사는 ICO를 하지 않으며 필요하지도 않습니다.<br><br>
-
 									전 세계 사용자들은 저희 시스템을 통하여 쉽고 빠르게 흥미로운 투표를 개설하고 참여할 수 있습니다. <br>
 									뿐만 아니라, 투표 개설자들은 암호화폐로 투표를 받기 때문에 큰 수익을 얻을 수 있습니다. <br><br>
-
 									캐스팅보트솔루션은 기존의 딱딱하고 공적인 투표 주제보다는, 주로 흥미위주의 한류 문화콘텐츠에 기반을 둔 프로젝트를 기획 및 준비하고 있습니다.<br><br>
-
 									이제는 당신도 국경의 제한 없이 ‘주도적으로’ 투표를 개설할 수 있고 ‘실시간으로’ 투표에 참여할 수 있습니다.
 								</p>
 								<div class="keyword">
@@ -593,174 +590,173 @@
 				$iframeB.mouseleave(function() {
 					$iframeB_iframe.css("pointer-events", "none");
 				});
-			});
-		</script>
-		<script>
-			$(document).ready(function(){
-				// 반응형일 때 햄버거 메뉴
-				$('.navbar').click(function() {
-					var $this_navbar	= $(this);
-					var $html_body		= $('html, body');
-					var $black_bg		= $('.black_bg');
-					var $m_menu			= $('.m_menu');
 
-					$this_navbar.toggleClass('after');
-					$black_bg.toggle();
 
-					if($this_navbar.hasClass('after')) {
-						$m_menu.show().stop().animate({'right':'0'},500);
-						// 스크롤 막기
-						$html_body.on('scroll touchmove mousewheel', function(e) {
-							e.preventDefault();
-							e.stopPropagation();
-							return false;
-						});
-						$black_bg.click(function() {
-							$(this).hide();
+
+					// 반응형일 때 햄버거 메뉴
+					$('.navbar').click(function() {
+						var $this_navbar	= $(this);
+						var $html_body		= $('html, body');
+						var $black_bg		= $('.black_bg');
+						var $m_menu			= $('.m_menu');
+
+						$this_navbar.toggleClass('after');
+						$black_bg.toggle();
+
+						if($this_navbar.hasClass('after')) {
+							$m_menu.show().stop().animate({'right':'0'},500);
+							// 스크롤 막기
+							$html_body.on('scroll touchmove mousewheel', function(e) {
+								e.preventDefault();
+								e.stopPropagation();
+								return false;
+							});
+							$black_bg.click(function() {
+								$(this).hide();
+								$m_menu.fadeOut().stop().animate({'right':'-100%'},500);
+								// 스크롤 다시 허용
+								$html_body.off('scroll touchmove mousewheel');
+							});
+						}
+						else {
 							$m_menu.fadeOut().stop().animate({'right':'-100%'},500);
 							// 스크롤 다시 허용
 							$html_body.off('scroll touchmove mousewheel');
-						});
-					}
-					else {
-						$m_menu.fadeOut().stop().animate({'right':'-100%'},500);
-						// 스크롤 다시 허용
-						$html_body.off('scroll touchmove mousewheel');
-					}
-				});
-
-				$('.m_menu li').click(function() {
-					$(this).parents('.m_menu').fadeOut().stop().animate({'right':'-100%'},500);
-					$('.black_bg').hide();
-					$('.navbar').removeClass('after');
-					// 스크롤 다시 허용
-					$('html, body').off('scroll touchmove mousewheel');
-				});
-
-
-
-				// 로딩 화면 오픈
-				function cfn_openLoading() {
-					$('.black_bg').show();
-
-					// 스크롤 막기
-					$('html, body').on('scroll touchmove mousewheel', function(e) {
-						e.preventDefault();
-						e.stopPropagation();
-						return false;
+						}
 					});
-				}
+
+					$('.m_menu li').click(function() {
+						$(this).parents('.m_menu').fadeOut().stop().animate({'right':'-100%'},500);
+						$('.black_bg').hide();
+						$('.navbar').removeClass('after');
+						// 스크롤 다시 허용
+						$('html, body').off('scroll touchmove mousewheel');
+					});
 
 
 
-				// 로딩 화면 닫기
-				function cfn_closeLoading() {
-					$('.black_bg').hide();
+					// 이메일 전송
+					$("#btnSendMsg").click(function() {
+						if(!checkValidation()) {
+							return false;
+						}
 
-					// 스크롤 다시 허용
-					$('html, body').off('scroll touchmove mousewheel');
-				}
+						cfn_openLoading();
+						submit_form();
+					});
 
 
 
-				// 이메일 전송
-				$("#btnSendMsg").click(function() {
-					if(!checkValidation()) {
-						return false;
-					}
+					var sec4 = $('.section4').offset().top;
+					$('.mTitle span').click(function() {
+						$('html, body').animate({'scrollTop':sec4});
+					});
+			});
 
-					cfn_openLoading();
-					submit_form();
+
+
+			// 로딩 화면 오픈
+			function cfn_openLoading() {
+				$('.black_bg').show();
+
+				// 스크롤 막기
+				$('html, body').on('scroll touchmove mousewheel', function(e) {
+					e.preventDefault();
+					e.stopPropagation();
+					return false;
 				});
+			}
 
 
 
-				// 유효성 검사
-				function checkValidation() {
-					var $txtName_id		= $("#txtName");
-					var $txtEmail_id	= $("#txtEmail");
-					var $txtAreaMsg_id	= $("#txtAreaMsg");
+			// 로딩 화면 닫기
+			function cfn_closeLoading() {
+				$('.black_bg').hide();
 
-					if(!$txtName_id.val()) {
-						alert("Name을 입력해주세요.");
-						$txtName_id.focus();
+				// 스크롤 다시 허용
+				$('html, body').off('scroll touchmove mousewheel');
+			}
 
-						return false;
-					}
-					if(!isValidEmailAddr()) {
 
-						return false;
-					}
-					if(!$txtAreaMsg_id.val()) {
-						alert("Message를 입력해주세요.");
-						$txtAreaMsg_id.focus();
 
-						return false;
-					}
+			// 유효성 검사
+			function checkValidation() {
+				var $txtName_id		= $("#txtName");
+				var $txtEmail_id	= $("#txtEmail");
+				var $txtAreaMsg_id	= $("#txtAreaMsg");
 
-					return true;
+				if(!$txtName_id.val()) {
+					alert("Name을 입력해주세요.");
+					$txtName_id.focus();
+
+					return false;
+				}
+				if(!isValidEmailAddr()) {
+
+					return false;
+				}
+				if(!$txtAreaMsg_id.val()) {
+					alert("Message를 입력해주세요.");
+					$txtAreaMsg_id.focus();
+
+					return false;
 				}
 
+				return true;
+			}
 
 
-				// 이메일 입력 및 양식 확인
-				function isValidEmailAddr() {
-					var check = true;
-					var regEmail = /([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
 
-					var $txtEmail_id	= $("#txtEmail");
+			// 이메일 입력 및 양식 확인
+			function isValidEmailAddr() {
+				var check = true;
+				var regEmail = /([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
 
-					if(!$txtEmail_id.val()) {
-						alert("Email을 입력해주세요.");
-			       		$txtEmail_id.focus();
+				var $txtEmail_id	= $("#txtEmail");
 
-			       		check = false;
-			       	} else {
-			       		if(!regEmail.test($txtEmail_id.val())) {
-							alert("Email 양식을 다시 확인해주세요.");
+				if(!$txtEmail_id.val()) {
+					alert("Email을 입력해주세요.");
 							$txtEmail_id.focus();
 
-				       		check = false;
-			       		} else {
-			       			check = true;
-			       		}
-		            }
+							check = false;
+						} else {
+							if(!regEmail.test($txtEmail_id.val())) {
+						alert("Email 양식을 다시 확인해주세요.");
+						$txtEmail_id.focus();
 
-					return check;
-				}
+								check = false;
+							} else {
+								check = true;
+							}
+							}
 
-
-
-				// 이메일 전송
-				function submit_form() {
-					setTimeout(function() {
-						afterSendEmail();
-						console.clear();
-						cfn_closeLoading();
-					}, 2000);
-
-					document.gform.target = '_ifrGform';
-					document.gform.action = 'https://script.google.com/macros/s/AKfycbw47biksMAqBzK597RF523y3hb7knlV8QIXPxLlyovti6fl8Mw/exec';
-					document.gform.submit();
-				}
+				return check;
+			}
 
 
 
-				// 이메일 전송 후 처리
-				function afterSendEmail() {
-					$("#txtName, #txtEmail, #txtAreaMsg").val("");		// input box 초기화
-					alert("메시지 전송이 완료 되었습니다.");
+			// 이메일 전송
+			function submit_form() {
+				setTimeout(function() {
+					afterSendEmail();
+					console.clear();
+					cfn_closeLoading();
+				}, 2000);
 
-					return;
-				}
+				document.gform.target = '_ifrGform';
+				document.gform.action = 'https://script.google.com/macros/s/AKfycbw47biksMAqBzK597RF523y3hb7knlV8QIXPxLlyovti6fl8Mw/exec';
+				document.gform.submit();
+			}
 
 
 
-				var sec4 = $('.section4').offset().top;
-				$('.mTitle span').click(function() {
-					$('html, body').animate({'scrollTop':sec4});
-				});
-			});
+			// 이메일 전송 후 처리
+			function afterSendEmail() {
+				$("#txtName, #txtEmail, #txtAreaMsg").val("");		// input box 초기화
+				alert("메시지 전송이 완료 되었습니다.");
+
+				return;
+			}
 		</script>
 	</body>
 
