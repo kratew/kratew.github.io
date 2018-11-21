@@ -307,7 +307,7 @@ header nav li a { padding: 20px 0; }
 section { padding-top: 80px; }
 .mTitle { width: 100%; text-align: right; margin-top: 30px; position: absolute; right: 50%; top: 50%; transform: translate(40%, -90%); }
 
-.m_menu div { position: absolute; bottom: 20px; left: 40px;  }
+.m_menu div { position: absolute; bottom: 20px; left: 40px; transition: all .5s; }
 .m_menu div h3 { font-size: 0.8rem; color: #aaa; }
 .m_menu div p { font-size: 1rem; margin-bottom: 8px; }
 
