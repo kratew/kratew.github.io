@@ -62,8 +62,8 @@ p { font-size: 14px; font-weight: bold; }
 .white:before { background: #fff; }
 
 section div > div {float: left;/* width: 48%; */}
-section > div .leftBox {width: 140px; height: 100%; margin-right: 70px; }
-section > div .rightBox { width: calc(100% - 210px); position: relative; margin-top: 50px; }
+section > div .leftBox {width: 145px;height: 100%;margin-right: 70px;}
+section > div .rightBox {width: calc(100% - 215px);position: relative;margin-top: 50px;}
 
 .blinking{
 -webkit-animation:blink 1s ease-in-out infinite alternate;
@@ -184,7 +184,7 @@ section .rightBox > div { width: 90%; }
 .list_table tr td table th { font-size: 18px; border: 2px solid #fff; text-align: center; word-break: keep-all; }
 .list_table .bold td { background: #fff2f2; font-weight: 600; }
 
-.listBtn { display: /*table*/ none; margin: 40px auto; padding:0;}
+.listBtn {display: table;margin: 40px auto;padding:0;}
 .listBtn li { float:left; width: 30px; height: 30px; text-align: center; }
 .listBtn li a { display: block; background: #fff; border: 1px solid #ddd; color: #333; line-height: 30px; }
 .listBtn .list a { background: #333; color: #fff; }
@@ -370,7 +370,7 @@ section .rightBox > div {width: 100%; position: absolute; top: 100%; left: 50%; 
 
     .tg {table-layout: fixed; }
     .tg tr td:not(:nth-child(2)) { display: none;  }
-    .tg tr td:nth-child(2) { padding: 20px 20px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 14px; }
+    .tg tr td:nth-child(2) {padding: 10px 20px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;font-size: 14px;}
     .tg tr td:nth-child(2) span { display: block; color: #aaa;}
 
 section .rightBox > div { transform: translateX(-50%);}
@@ -384,7 +384,7 @@ section .rightBox > div { transform: translateX(-50%);}
     .bx-pager { transform: translateX(-9%);}
     .section4 .caseSlide li p { text-align: left; }
     .section5 .rightBox > div { top: 100%; }
-    .press_logo { height: 20px; line-height: inherit; margin: 10% 4%; }
+    .press_logo {height: 20px;line-height: inherit;margin: 3% 4%;}
 
     .section6 div p { font-size: 16px; }
     .section6 .snsBox { margin-top: 20px; }
