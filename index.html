@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Casting Vote Solution</title>
+		<title>스크롤 Casting Vote Solution</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="stylesheet" type="text/css" href="css/swiper.css">
 	</head>
@@ -270,7 +270,7 @@
 								<li><span>Aaron</span><span>Technical Development Team</span></li>
 								<li><span>JJIN</span><span>Frontend Developer</span></li>
 								<li><span>Esther</span><span>Frontend Developer</span></li>
-								<li><span>Dowon</span><span>Designer</span></li>								
+								<li><span>Dowon</span><span>Designer</span></li>
 							</ul>
 						</div>
 					</div>
@@ -605,23 +605,17 @@
 
 						if($this_navbar.hasClass('after')) {
 							$m_menu.show().stop().animate({'right':'0'},500);
-							// 스크롤 막기
-							$html_body.on('scroll touchmove mousewheel', function(e) {
-								e.preventDefault();
-								e.stopPropagation();
-								return false;
-							});
+							$("body").css("overflow", "hidden"); 
 							$black_bg.click(function() {
 								$(this).hide();
 								$m_menu.fadeOut().stop().animate({'right':'-100%'},500);
-								// 스크롤 다시 허용
-								$html_body.off('scroll touchmove mousewheel');
+								$("body").css("overflow", "visible");
 							});
 						}
 						else {
 							$m_menu.fadeOut().stop().animate({'right':'-100%'},500);
 							// 스크롤 다시 허용
-							$html_body.off('scroll touchmove mousewheel');
+							$("body").css("overflow", "visible");
 						}
 					});
 
