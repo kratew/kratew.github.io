@@ -19,7 +19,7 @@ ul { -webkit-padding-start:0 !important; }
 body { overflow-x:hidden; }
 
 div#main { height:100%; }
-section { height:100% !important; background-size: cover !important; background-position: center !important; padding-top: 135px; box-sizing: border-box; position: relative; overflow: hidden;}
+section { height:100%; background-size: cover !important; background-position: center !important; padding-top: 135px; box-sizing: border-box; position: relative; overflow: hidden;}
 section:after {content:""; display:block; clear:both;}
 .section1 { background: url('../img/bg1.jpg') no-repeat; }
 .section2 { background-color: #edf6f7; }
