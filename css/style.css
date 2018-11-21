@@ -110,7 +110,7 @@ animation:blink 1s ease-in-out infinite alternate;
 .keyword div ul li:nth-child(odd) { background: #9e9d9d; }
 
 .about2 { width:100%; display: inline-block; }
-.about2 > div { width:26%; height: 250px; display: inline-block; text-align:center; margin: 0 calc(22% / 6) ; margin-bottom: 25px; }
+.about2 > div { width:25%; height: 250px; display: inline-block; text-align:center; margin: 0 calc(22% / 6) ; margin-bottom: 25px; }
 .about2 > div img { width:100%; height:auto; }
 /* .about2 > div:nth-child(4) { margin-left: 20%; margin-right:8%; } */
 .about2 > div:nth-child(5) { margin-left: 0%; margin-right:20%; }
