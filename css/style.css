@@ -236,7 +236,7 @@ section .rightBox > div { width: 90%; }
    -moz-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
    -ms-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
    -o-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
-   transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360); padding: 12px 20px; font-size: 14px; font-weight: bold; border-radius: 4px; }
+   transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360); padding: 12px 20px; font-size: 14px; font-weight: bold; border-radius: 4px; white-space: nowrap;}
 a.btn_green { background:#333; color:#fff; box-shadow: #022b2b 0 0px 0px 1px inset;}
 a.btn_green:hover { color:#fff; box-shadow: #022b2b 0 0px 0px 40px inset;}
 
