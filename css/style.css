@@ -354,7 +354,7 @@ section .rightBox > div {width: 100%; position: absolute; top: 100%; left: 50%; 
     .navbar { right: 3.5%; }
 
     .dots { right: 10px; }
-    section { height: 660px; padding-top: 90px; box-sizing: border-box; overflow: hidden; }
+    section { height: 660px; padding-top: 80px; box-sizing: border-box; overflow: hidden; }
     h2 { text-align: left; font-size: 2rem; }
     h2:before { bottom: -7px; height: 3px;}
     .navbar { top: 7px; }
@@ -453,6 +453,15 @@ section .rightBox > div { transform: translateX(-50%);}
 
 @media only screen and (max-width:374px) {
 
+.mTitle p:nth-child(1) {font-size: 50px; }
+.mTitle p:nth-child(2) {font-size: 22px; }
+.mTitle { transform: translate(-48%, -105%)}
+.mTitle span { padding: 20px 45px; background-position: center right 26px; margin-top: 60px; }
 .info { display: none;}
+
+.section7 .rightBox div ul li { margin-bottom: 15px; }
+section > div .rightBox { margin-top: 20px; }
+
+.section7 .teamBg { top: 130px; }
 
 }
