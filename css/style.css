@@ -229,7 +229,7 @@ section .rightBox > div { width: 90%; }
 .contact .info h3 { font-size: 20px; color: #5affff; font-weight: bold; }
 .contact .info div p { font-size: 16px; margin-bottom: 25px;  }
 
-.btn_right { display:inline-block; width:auto; height:auto; margin-top:20px; }
+.btn_right { display:inline-block; width:100%; height:auto; margin-top:20px; }
 .btn_right a {
     display:inline-block;
    -webkit-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
