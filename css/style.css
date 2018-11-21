@@ -354,7 +354,7 @@ section .rightBox > div {width: 100%; position: absolute; top: 100%; left: 50%; 
     .navbar { right: 3.5%; }
 
     .dots {right: 5px;}
-    section { height: 660px; padding-top: 80px; box-sizing: border-box; overflow: hidden; }
+    section { height: 100%; padding-top: 80px; box-sizing: border-box; overflow: hidden; }
     h2 { text-align: left; font-size: 2rem; }
     h2:before { bottom: -7px; height: 3px;}
     .navbar { top: 7px; }
