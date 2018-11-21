@@ -62,8 +62,8 @@ p { font-size: 14px; font-weight: bold; }
 .white:before { background: #fff; }
 
 section div > div {float: left;/* width: 48%; */}
-section > div .leftBox {width: 145px;height: 100%;margin-right: 70px;}
-section > div .rightBox {width: calc(100% - 215px);position: relative;margin-top: 50px;}
+section > div .leftBox {width: 158px;height: 100%;margin-right: 70px;}
+section > div .rightBox {width: calc(100% - 228px);position: relative;margin-top: 50px;}
 
 .blinking{
 -webkit-animation:blink 1s ease-in-out infinite alternate;
