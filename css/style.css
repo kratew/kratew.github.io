@@ -463,8 +463,6 @@ section { height: 640px; }
 
 @media only screen and (max-width:374px) {
 
-.info, .m_menu div { display: none;}
-
 .mTitle p:nth-child(1) {font-size: 50px; }
 .mTitle p:nth-child(2) {font-size: 22px; }
 .mTitle span { padding: 20px 45px; background-position: center right 26px; margin-top: 60px; }
@@ -474,5 +472,10 @@ section > div .rightBox { margin-top: 20px; }
 
 .section6 .snsBox { margin-top: 10px;}
 .section7 .teamBg { top: 130px; }
+
+}
+
+@media only screen and (max-width:374px) {
+.info, .m_menu div { display: none;}
 
 }
