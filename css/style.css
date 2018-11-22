@@ -19,7 +19,7 @@ ul { -webkit-padding-start:0 !important; }
 body { overflow-x:hidden; }
 
 div#main { height:100%; }
-section { height:100%; background-size: cover !important; background-position: center !important; padding-top: 135px; box-sizing: border-box; position: relative; overflow: hidden;}
+section { height:100%; background-size: cover !important; background-position: center !important; padding-top: 135px; box-sizing: border-box; position: relative; overflow: hidden; transition: all .3s ease; }
 section:after {content:""; display:block; clear:both;}
 .section1 { background: url('../img/bg1.jpg') no-repeat; }
 .section2 { background-color: #edf6f7; }
@@ -357,7 +357,7 @@ section .rightBox > div {width: 100%; position: absolute; top: 100%; left: 50%; 
     .navbar { right: 3.5%; }
 
     .dots {right: 5px;}
-    section { height: 100%; max-height: 100%; padding-top: 80px; box-sizing: border-box; overflow: hidden; }
+    section { height: 100%; padding-top: 80px; box-sizing: border-box; overflow: hidden; }
     h2 { text-align: left; font-size: 2rem; }
     h2:before { bottom: -7px; height: 3px;}
     .navbar { top: 7px; }
