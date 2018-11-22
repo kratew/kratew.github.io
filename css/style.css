@@ -215,14 +215,15 @@ section .rightBox > div { width: 90%; }
 .section8 .rightBox { margin-top: 130px }
 .section8 .rightBox .contact {width: 100%;}
 .contact > div {float: left;color: #fff;margin-top: 100%;opacity: 0;width: auto;}
-.contact > div:first-child {margin-right: 10%;width: 45%;}
+.contact > div:first-child {margin-right: 7%; width:40%;}
 .contact > div:after { content:""; display:block; clear:both; }
-.contact .nameEmail {display: inline-block;margin-bottom: 10px;width: 100%;}
+.contact .nameEmail {display: inline-block; width: 100%;}
 .contact .nameEmail div:first-child,
-.contact .nameEmail div:last-child { width: 100%;}
-.contact form input {border: none;width: 100%;height: 40px;padding: 10px 15px;box-sizing: border-box;border-radius: 5px;background:#fff;}
-.contact form textarea { width: 100%; height: 250px; padding: 10px 15px; box-sizing: border-box; border-radius: 5px; font-size: 14px; border:none;}
+.contact .nameEmail div:last-child { width: 100%; margin-bottom: 10px;}
+.contact form input {border: none;width: 100%;height: 40px;padding: 10px 15px;box-sizing: border-box;border-radius: 5px;background:#fff;font-family: 'Nanum Gothic', '나눔고딕';}
+.contact form textarea { width: 100%; height: 250px; padding: 10px 15px; box-sizing: border-box; border-radius: 5px; border:none; font-family: 'Nanum Gothic', '나눔고딕';}
 
+.contact .info { width: 43%; }
 .contact .info ul { margin-bottom: 85px; }
 .contact .info ul li { float: left; margin-right: 20px;  }
 .contact .info ul li:after { content:""; display:block; clear:both; }
@@ -407,8 +408,9 @@ section .rightBox > div { transform: translateX(-50%);}
     .contact > div:first-child, .contact > div:last-child { width: 90%; }
     .contact > div:last-child { margin-top: -20px !important;}
     .contact .nameEmail { margin-bottom: 0; }
-    .contact form textarea { height: 80px; }
+    .contact form textarea { height: 70px; font-size: 14px; padding: 5px 10px;}
     .contact .nameEmail div, .contact form textarea { width: 100%; }
+    .contact .info { width: 100%; }
     .contact .info ul { display: table; margin: 10px 0; }
     .contact .info h3 {font-size: 12px; }
     .contact .info div p { margin-bottom: 8px; }
@@ -442,6 +444,8 @@ section .rightBox > div { transform: translateX(-50%);}
 
     /* used cases */
     .section4 .bx-pager { bottom:-40px; }
+
+    .contact form input { height: 33px; padding: 0 10px; font-size: 14px; }
   }
 
 
