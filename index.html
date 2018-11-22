@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>수정2Casting Vote Solution</title>
+		<title>수정3Casting Vote Solution</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="stylesheet" type="text/css" href="css/swiper.css">
 	</head>
@@ -445,7 +445,7 @@
 							}
 						}
 						// 화면 이동 0.5초(500)
-						$("html,body").stop().animate({
+						$("html, body").stop().animate({
 							scrollTop: moveTop
 						}, {
 							duration: 500, complete: function () { }
@@ -595,6 +595,7 @@
 
 					// 반응형일 때 햄버거 메뉴
 					$('.navbar').click(function() {
+						var $body 			= $("body");
 						var $this_navbar	= $(this);
 						var $html_body		= $('html, body');
 						var $black_bg		= $('.black_bg');
@@ -605,19 +606,22 @@
 
 						if($this_navbar.hasClass('after')) {
 							$m_menu.show().stop().animate({'right':'0'},500);
-							$("body").css("overflow", "hidden");
+							$body.css({overflow:'hidden', position:'fixed'});
 							$black_bg.click(function() {
 								$(this).hide();
 								$m_menu.fadeOut().stop().animate({'right':'-100%'},500);
 
 								//스크롤 막기
-								$("body").css({overflow:'hidden'}).bind('touchmove', function(e){e.preventDefault()});
+								$body.css({overflow:'hidden', position:'fixed'}).bind('touchmove', function(e){e.preventDefault()});
 							});
 						}
 						else {
 							$m_menu.fadeOut().stop().animate({'right':'-100%'},500);
+
 							// 스크롤 다시 허용
-							$("body").unbind('touchmove');
+							$body.removeClass('overflow')
+								 .removeClass('position')
+								 .unbind('touchmove');
 						}
 					});
 
@@ -625,8 +629,11 @@
 						$(this).parents('.m_menu').fadeOut().stop().animate({'right':'-100%'},500);
 						$('.black_bg').hide();
 						$('.navbar').removeClass('after');
+
 						// 스크롤 다시 허용
-						$("body").unbind('touchmove');
+						$("body").removeClass('overflow')
+								 .removeClass('position')
+								 .unbind('touchmove');
 					});
 
 
@@ -655,12 +662,8 @@
 			function cfn_openLoading() {
 				$('.black_bg').show();
 
-				// 스크롤 막기
-				$('html, body').on('scroll touchmove mousewheel', function(e) {
-					e.preventDefault();
-					e.stopPropagation();
-					return false;
-				});
+				//스크롤 막기
+				$body.css({overflow:'hidden', position:'fixed'}).bind('touchmove', function(e){e.preventDefault()});
 			}
 
 
@@ -670,7 +673,9 @@
 				$('.black_bg').hide();
 
 				// 스크롤 다시 허용
-				$('html, body').off('scroll touchmove mousewheel');
+				$("body").removeClass('overflow')
+						 .removeClass('position')
+						 .unbind('touchmove');
 			}
 
 
@@ -729,8 +734,6 @@
 				return check;
 			}
 
-
-
 			// 이메일 전송
 			function submit_form() {
 				setTimeout(function() {
@@ -743,8 +746,6 @@
 				document.gform.action = 'https://script.google.com/macros/s/AKfycbw47biksMAqBzK597RF523y3hb7knlV8QIXPxLlyovti6fl8Mw/exec';
 				document.gform.submit();
 			}
-
-
 
 			// 이메일 전송 후 처리
 			function afterSendEmail() {
