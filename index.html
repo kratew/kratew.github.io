@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>수정3Casting Vote Solution</title>
+		<title>수정4Casting Vote Solution</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="stylesheet" type="text/css" href="css/swiper.css">
 	</head>
@@ -619,8 +619,7 @@
 							$m_menu.fadeOut().stop().animate({'right':'-100%'},500);
 
 							// 스크롤 다시 허용
-							$body.removeClass('overflow')
-								 .removeClass('position')
+							$body.css({overflow:'', position:''})
 								 .unbind('touchmove');
 						}
 					});
@@ -631,8 +630,7 @@
 						$('.navbar').removeClass('after');
 
 						// 스크롤 다시 허용
-						$("body").removeClass('overflow')
-								 .removeClass('position')
+						$("body").css({overflow:'', position:''})
 								 .unbind('touchmove');
 					});
 
@@ -673,8 +671,7 @@
 				$('.black_bg').hide();
 
 				// 스크롤 다시 허용
-				$("body").removeClass('overflow')
-						 .removeClass('position')
+				$("body").css({overflow:'', position:''})
 						 .unbind('touchmove');
 			}
 
