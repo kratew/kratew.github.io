@@ -461,7 +461,7 @@ section { height: 640px; }
 
 }
 
-@media only screen and (max-width:374px) {
+@media only screen and (max-width:375px) {
 .info, .m_menu div { display: none;}
 }
 
